@@ -9,9 +9,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "preinstall": "npm install @angular/cli @angular/compiler-cli typescript"
-    "postinstall": "ng build --aot --prod",
-    "heroku-postinstall": "ng build --aot --prod"
+    "preinstall": "npm install @angular/cli @angular/compiler-cli typescript",
+    "postinstall": "ng build --prod",
+    "heroku-postinstall": "ng build --prod"
   },
   "engines": {
     "node": "6.10.3",
