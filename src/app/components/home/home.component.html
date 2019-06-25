@@ -1,0 +1,18 @@
+<nav>
+  <ul>
+    <li *ngFor="let item of characters" (click)="fetchMovie(item)">{{item.name}}</li>
+  </ul>
+</nav>
+
+<div class="panels-wrapper" *ngIf="films != null">
+  <div class="panel" *ngFor="let film of films">
+    <h1>{{ film.title }}</h1>
+    <h2>{{ film.release_date | date:'fullDate' }}</h2>
+    <video></video>
+  </div>
+</div>
+<div class="panels-wrapper" *ngIf="films === null">
+  <div class="panel">
+    {{errMsg}}
+  </div>
+</div>
